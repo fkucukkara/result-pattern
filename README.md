@@ -322,3 +322,8 @@ The demo showcases several advanced Result pattern techniques:
 ✅ **Compose Results using extension methods**  
 
 The Result pattern provides a clean, performant, and predictable way to handle errors in modern .NET applications, making your code more robust and maintainable.
+
+## License
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+This project is licensed under the MIT License, which allows you to freely use, modify, and distribute the code. See the [`LICENSE`](LICENSE) file for full details.
