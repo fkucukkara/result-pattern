@@ -1,8 +1,8 @@
-using API.Common;
-using API.Models;
+using ResultPattern.API.Common;
+using ResultPattern.API.Models;
 using System.Collections.Concurrent;
 
-namespace API.Services;
+namespace ResultPattern.API.Services;
 
 public interface IUserRepository
 {

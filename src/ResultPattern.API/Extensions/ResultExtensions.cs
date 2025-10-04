@@ -1,8 +1,8 @@
-using API.Common;
-using API.Models;
+using ResultPattern.API.Common;
+using ResultPattern.API.Models;
 using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace API.Extensions;
+namespace ResultPattern.API.Extensions;
 
 public static class ResultExtensions
 {

@@ -1,6 +1,6 @@
-using API.Extensions;
-using API.Models;
-using API.Services;
+using ResultPattern.API.Extensions;
+using ResultPattern.API.Models;
+using ResultPattern.API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

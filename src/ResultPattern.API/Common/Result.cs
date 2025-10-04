@@ -1,4 +1,4 @@
-namespace API.Common;
+namespace ResultPattern.API.Common;
 
 public class Result<T>
 {

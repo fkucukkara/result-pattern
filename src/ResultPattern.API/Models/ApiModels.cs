@@ -1,4 +1,4 @@
-namespace API.Models;
+namespace ResultPattern.API.Models;
 
 public class User
 {

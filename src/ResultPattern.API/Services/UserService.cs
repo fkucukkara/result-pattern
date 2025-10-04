@@ -1,7 +1,7 @@
-using API.Common;
-using API.Models;
+using ResultPattern.API.Common;
+using ResultPattern.API.Models;
 
-namespace API.Services;
+namespace ResultPattern.API.Services;
 
 public interface IUserService
 {
@@ -11,14 +11,9 @@ public interface IUserService
     Task<Result<object?>> DeleteUserAsync(int id);
 }
 
-public class UserService : IUserService
+public class UserService(IUserRepository userRepository) : IUserService
 {
-    private readonly IUserRepository _userRepository;
-
-    public UserService(IUserRepository userRepository)
-    {
-        _userRepository = userRepository;
-    }
+    private readonly IUserRepository _userRepository = userRepository;
 
     public async Task<Result<User>> GetUserByIdAsync(int id)
     {

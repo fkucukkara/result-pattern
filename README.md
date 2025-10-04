@@ -135,18 +135,14 @@ The demo includes a complete User management API demonstrating the Result patter
    cd result-pattern-101
    ```
 
-2. **Navigate to the API folder**
+2. **Build and run the application**
    ```bash
-   cd API/API
-   ```
-
-3. **Build and run the application**
-   ```bash
+   # From the root directory
    dotnet build
-   dotnet run
+   dotnet run --project src/ResultPattern.API
    ```
 
-4. **Access the API**
+3. **Access the API**
    - API will be available at: `http://localhost:5065`
    - Swagger documentation: `http://localhost:5065/openapi/v1.json`
    - Use the provided `API.http` file for testing requests
@@ -231,23 +227,26 @@ GET /api/users/999
 ## Project Structure
 
 ```
-API/
-├── API.sln                          # Solution file
-└── API/
-    ├── API.csproj                   # Project file (.NET 9)
-    ├── API.http                     # HTTP test requests
-    ├── Program.cs                   # Application entry point & Minimal API setup
-    ├── appsettings.json             # Configuration
-    ├── appsettings.Development.json # Development configuration
-    ├── Common/
-    │   └── Result.cs                # Core Result pattern implementation
-    ├── Extensions/
-    │   └── ResultExtensions.cs      # HTTP response extensions
-    ├── Models/
-    │   └── ApiModels.cs             # Request/Response models
-    ├── Services/
-    │   ├── UserRepository.cs        # Data access using Result pattern
-    │   └── UserService.cs           # Business logic using Result pattern
+result-pattern-101/
+├── ResultPattern.sln                # Solution file
+├── global.json                      # .NET SDK configuration
+├── Directory.Build.props            # Centralized build properties
+└── src/
+    └── ResultPattern.API/
+        ├── ResultPattern.API.csproj # Project file (.NET 9)
+        ├── API.http                 # HTTP test requests
+        ├── Program.cs               # Application entry point & Minimal API setup
+        ├── appsettings.json         # Configuration
+        ├── appsettings.Development.json # Development configuration
+        ├── Common/
+        │   └── Result.cs            # Core Result pattern implementation
+        ├── Extensions/
+        │   └── ResultExtensions.cs  # HTTP response extensions
+        ├── Models/
+        │   └── ApiModels.cs         # Request/Response models
+        ├── Services/
+        │   ├── UserRepository.cs    # Data access using Result pattern
+        │   └── UserService.cs       # Business logic using Result pattern
     └── Properties/
         └── launchSettings.json      # Launch configuration
 ```
