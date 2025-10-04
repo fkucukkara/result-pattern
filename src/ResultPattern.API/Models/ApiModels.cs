@@ -10,5 +10,4 @@ public class User
 
 public record CreateUserRequest(string Name, string Email, int Age);
 public record UpdateUserRequest(string Name, int Age);
-
-public record ErrorResponse(string Message, string? Code = null);
+public record ErrorResponse(string Message);

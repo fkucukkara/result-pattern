@@ -122,8 +122,7 @@ The demo includes a complete User management API demonstrating the Result patter
 **Error Response:**
 ```json
 {
-  "message": "Email already exists",
-  "code": null
+  "message": "Email already exists"
 }
 ```
 
@@ -143,8 +142,8 @@ The demo includes a complete User management API demonstrating the Result patter
    ```
 
 3. **Access the API**
-   - API will be available at: `http://localhost:5065`
-   - Swagger documentation: `http://localhost:5065/openapi/v1.json`
+   - API will be available at: `https://localhost:7055`
+   - Swagger documentation: `https://localhost:7055/openapi/v1.json`
    - Use the provided `API.http` file for testing requests
 
 ## Testing the API
