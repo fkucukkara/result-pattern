@@ -1,0 +1,89 @@
+@API_HostAddress = http://localhost:5065
+
+### Get User by ID (Success case)
+GET {{API_HostAddress}}/api/users/1
+Accept: application/json
+
+###
+
+### Get User by ID (Not found case)
+GET {{API_HostAddress}}/api/users/999
+Accept: application/json
+
+###
+
+### Get User by ID (Invalid ID case)
+GET {{API_HostAddress}}/api/users/0
+Accept: application/json
+
+###
+
+### Create User (Success case)
+POST {{API_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com",
+  "age": 30
+}
+
+###
+
+### Create User (Duplicate email case)
+POST {{API_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+  "name": "Jane Smith",
+  "email": "john.doe@example.com",
+  "age": 25
+}
+
+###
+
+### Create User (Invalid age case)
+POST {{API_HostAddress}}/api/users
+Content-Type: application/json
+
+{
+  "name": "Bob Wilson",
+  "email": "bob.wilson@example.com",
+  "age": -5
+}
+
+###
+
+### Update User (Success case)
+PUT {{API_HostAddress}}/api/users/1
+Content-Type: application/json
+
+{
+  "name": "John Updated",
+  "age": 31
+}
+
+###
+
+### Update User (Not found case)
+PUT {{API_HostAddress}}/api/users/999
+Content-Type: application/json
+
+{
+  "name": "Non Existent",
+  "age": 25
+}
+
+###
+
+### Delete User (Success case)
+DELETE {{API_HostAddress}}/api/users/1
+Accept: application/json
+
+###
+
+### Delete User (Not found case)
+DELETE {{API_HostAddress}}/api/users/999
+Accept: application/json
+
+###
