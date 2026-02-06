@@ -6,7 +6,7 @@ applyTo: '**/*.cs'
 # C# Development Guidelines
 
 ## C# Language Features
-- Always use the latest version C#, currently C# 13 features
+- Always use the latest version C#, currently C# 14 features
 - Leverage pattern matching, nullable reference types, and modern language constructs
 - Use file-scoped namespace declarations and global using statements
 - Prefer record types for immutable data models

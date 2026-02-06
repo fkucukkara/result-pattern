@@ -1,6 +1,6 @@
 # Result Pattern Demo 
 
-A comprehensive demonstration of the **Result Pattern** in .NET 9, showing how to handle errors gracefully without throwing exceptions in a real-world ASP.NET Core Minimal API.
+A comprehensive demonstration of the **Result Pattern** in .NET 10, showing how to handle errors gracefully without throwing exceptions in a real-world ASP.NET Core Minimal API.
 
 ## What is the Result Pattern?
 
@@ -232,7 +232,7 @@ result-pattern-101/
 ├── Directory.Build.props            # Centralized build properties
 └── src/
     └── ResultPattern.API/
-        ├── ResultPattern.API.csproj # Project file (.NET 9)
+        ├── ResultPattern.API.csproj # Project file (.NET 10)
         ├── API.http                 # HTTP test requests
         ├── Program.cs               # Application entry point & Minimal API setup
         ├── appsettings.json         # Configuration
